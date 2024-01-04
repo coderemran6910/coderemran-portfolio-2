@@ -12,6 +12,10 @@ section{
     height: 100vh;
     scroll-snap-align: center;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 body{
     background-color: #0c0c1d;
