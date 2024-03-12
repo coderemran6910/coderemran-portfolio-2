@@ -1,10 +1,12 @@
 import './app.scss';
 import Test from './components/Test';
+import Banner from './components/banner/Banner';
 import Navbar from './components/nabvar/navbar';
 const App = () => {
   return <div>
     <section id='Home'>
       <Navbar />
+      <Banner/>
     </section>
     <section id='Services'>Peralax</section>
     <section>Services</section>
