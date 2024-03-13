@@ -22,7 +22,7 @@ const Paralax = ({ type }) => {
       }}
     >
       <motion.h1 style={{ y: yText }}>
-        {type === "services" && "Expertise Offerings for you"}
+        {type === "services" && "Development Solutions"}
         {type === "portfolio" && "My Webfolio"}
         {type === "contact" && "Get in Contact"}
       </motion.h1>
