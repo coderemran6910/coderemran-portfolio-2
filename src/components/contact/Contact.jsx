@@ -2,6 +2,7 @@ import { useRef } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from '@emailjs/browser';
+import { Toaster, toast } from 'sonner'
 
 
 const variants = {
@@ -38,10 +39,10 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          toast.success('EMAIL SENT SUCCESSFULLY!! Thanks ');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          toast.error(error.text);
         },
       );
   };
@@ -177,6 +178,7 @@ const Contact = () => {
           </motion.form>
         </div>
       </motion.div>
+      <Toaster/>
     </motion.div>
   );
 };
