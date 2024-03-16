@@ -1,10 +1,10 @@
 import './app.scss';
-// import Test from './components/Test';
 import Banner from './components/banner/Banner';
 import Contact from './components/contact/Contact';
 import Navbar from './components/nabvar/navbar';
 import Paralax from './components/paralax/Paralax';
 import Portfolio from './components/portfolio/Portfolio';
+import Services from './components/services/Services';
 const App = () => {
   return <div>
     <section id='Home'>
@@ -14,7 +14,7 @@ const App = () => {
     <section id='Services'>
       <Paralax type="services" />
     </section>
-    <section>Services</section>
+    <section><Services/></section>
 
 
     <section id='Portfolio'>

@@ -1,5 +1,5 @@
-import { useRef } from "react";
 import "./paralax.scss";
+import { useRef } from "react";
 import {motion, useScroll, useTransform} from 'framer-motion';
 const Paralax = ({ type }) => {
     const ref = useRef();

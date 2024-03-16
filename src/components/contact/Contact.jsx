@@ -34,16 +34,16 @@ const Contact = () => {
 
           <motion.div className="social" variants={variants}>
             <a href="#">
-              <img src="/facebook.png" alt="" />
+              <img src="./facebook.png" alt="" />
             </a>
             <a href="#">
-              <img src="/instagram.png" alt="" />
+              <img src="./instagram.png" alt="" />
             </a>
             <a href="#">
-              <img src="/youtube.png" alt="" />
+              <img src="./youtube.png" alt="" />
             </a>
             <a href="#">
-              <img src="/dribble.png" alt="" />
+              <img src="./dribble.png" alt="" />
             </a>
           </motion.div>
         </motion.div>
@@ -68,7 +68,6 @@ const Contact = () => {
               <g id="_x32_5_attachment" />
 
               <g id="_x32_4_office" />
-
               <g id="_x32_3_pin" />
 
               <g id="_x32_2_business_card" />
