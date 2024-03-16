@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
+import emailjs from '@emailjs/browser';
+
+
 const variants = {
   initial: {
     y: 500,
@@ -15,7 +18,37 @@ const variants = {
     },
   },
 };
+
+
+  
+
+
+
+
 const Contact = () => {
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm( import.meta.env.VITE_SOPPORT_SERVICE_ID,
+        import.meta.env.VITE_SOPPORT_TEMPLATE_ID, ref.current, {
+        publicKey:  import.meta.env.VITE_SOPPORT_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
+
+
     const ref = useRef(null);
     const isInView = useInView(ref, { mergin: "-100px" });
   return (
@@ -131,14 +164,16 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
+           onSubmit={sendEmail}
+           ref={ref}
            initial={{ opacity: 0 }}
            whileInView={{ opacity: 1 }}
            transition={{ delay:3 , duration: 1 }}
           >
-            <input required type="text" placeholder="Name" />
-            <input required type="email" placeholder="Email" />
-            <textarea rows="8" placeholder="Message" />
-            <button>Send</button>
+            <input required type="text" placeholder="Name" name="user_name" />
+            <input required type="email" placeholder="Email" name="user_email" />
+            <textarea rows="8" placeholder="message" name="message" />
+            <button type="submit">Send</button>
           </motion.form>
         </div>
       </motion.div>
