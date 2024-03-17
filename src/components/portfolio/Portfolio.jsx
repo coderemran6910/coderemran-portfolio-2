@@ -19,37 +19,36 @@ const items = [
   {
     id: 2,
     title: "Rastaurent Management",
-    desc: " lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+    desc: "a restaurant management system designed to streamline operations, manage orders, inventory, reservations, and more. Highlight the main features and functionalities.",
     Image:
       "https://i.ibb.co/NjHGV9G/screencapture-rastaurent-management-a-11-web-app-2024-02-18-01-51-40.png",
-    link: "https://contest-creation-platform.web.app/",
+    link: "https://rastaurent-management-a-11.web.app",
     githubClient:
-      "https://github.com/programming-hero-web-course1/b8a12-client-side-coderemran6910.git",
+      "https://github.com/coderemran6910/Rastaurent-management-a11.git",
     githubServer:
-      "https://github.com/programming-hero-web-course1/b8a12-server-side-coderemran6910.git",
+      "https://github.com/coderemran6910/Rastaurent-management-a11-Server-Side.git",
   },
 
   {
     id: 3,
     title: "Event  Management",
-    desc: " lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+    desc: " Event Management System, You can start your Event Business with this Application, The Application help you very much like you can setup every event With time, money, size etc filter.",
     Image: "https://i.ibb.co/r67JGTL/firebase.png",
-    link: "https://contest-creation-platform.web.app/",
+    link: "https://social-event-react-project.web.app",
     githubClient:
-      "https://github.com/programming-hero-web-course1/b8a12-client-side-coderemran6910.git",
-    githubServer:
-      "https://github.com/programming-hero-web-course1/b8a12-server-side-coderemran6910.git",
+      "https://github.com/coderemran6910/Event-management-website-a-9",
+    githubServer:"#",
   },
   {
     id: 4,
     title: "Task  Management",
-    desc: " lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    Image: "https://i.ibb.co/r67JGTL/firebase.png",
+    desc: " Projects & Tasks is a comprehensive tool that allows you to efficiently manage your projects and tasks. With a user-friendly interface, you can create, organize, and prioritize tasks effortlessly. Stay on top of deadlines and milestones by assigning tasks, setting due dates, and tracking progress. Whether you are working on a solo project or collaborating with a team, Projects & Tasks has got you covered. Keep everything organized and on track.",
+    Image: "https://i.ibb.co/QPHjXR3/Task-Flow.png",
     link: "https://contest-creation-platform.web.app/",
     githubClient:
-      "https://github.com/programming-hero-web-course1/b8a12-client-side-coderemran6910.git",
+      "https://github.com/reZerOR/task-management-project.git",
     githubServer:
-      "https://github.com/programming-hero-web-course1/b8a12-server-side-coderemran6910.git",
+      "https://github.com/reZerOR/task-management-project-server.git",
   },
 ];
 
