@@ -6,14 +6,14 @@ const items = [
   {
     id: 1,
     title: "Contest Management",
-    desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+    desc: "Determine the kind of contest you want to create. Is it a design contest, a coding challenge, a writing competition, or something else entirely? Clarify the rules, guidelines, and objectives for participants. Target Audience: Identify your target participants.",
     Image:
-      "https://i.ibb.co/NyMw7yt/screencapture-contest-creation-platform-web-app-2024-02-18-01-50-08.png",
-    link: "https://contest-creation-platform.web.app/",
+    "https://i.ibb.co/NyMw7yt/screencapture-contest-creation-platform-web-app-2024-02-18-01-50-08.png",
+    link: "https://rastaurent-management-a-11.web.app",
     githubClient:
-      "https://github.com/programming-hero-web-course1/b8a12-client-side-coderemran6910.git",
+    "https://github.com/programming-hero-web-course1/b8a12-client-side-coderemran6910.git",
     githubServer:
-      "https://github.com/programming-hero-web-course1/b8a12-server-side-coderemran6910.git",
+    "https://github.com/programming-hero-web-course1/b8a12-server-side-coderemran6910.git",
   },
 
   {
@@ -37,7 +37,7 @@ const items = [
     link: "https://social-event-react-project.web.app",
     githubClient:
       "https://github.com/coderemran6910/Event-management-website-a-9",
-    githubServer:"#",
+    githubServer: "#",
   },
   {
     id: 4,
@@ -45,8 +45,7 @@ const items = [
     desc: " Projects & Tasks is a comprehensive tool that allows you to efficiently manage your projects and tasks. With a user-friendly interface, you can create, organize, and prioritize tasks effortlessly. Stay on top of deadlines and milestones by assigning tasks, setting due dates, and tracking progress. Whether you are working on a solo project or collaborating with a team, Projects & Tasks has got you covered. Keep everything organized and on track.",
     Image: "https://i.ibb.co/QPHjXR3/Task-Flow.png",
     link: "https://contest-creation-platform.web.app/",
-    githubClient:
-      "https://github.com/reZerOR/task-management-project.git",
+    githubClient: "https://github.com/reZerOR/task-management-project.git",
     githubServer:
       "https://github.com/reZerOR/task-management-project-server.git",
   },
@@ -67,12 +66,15 @@ const SingleItem = ({ item }) => {
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.Image} alt="" />
+            <div className="img" style={{ backgroundImage: `url('${item.Image}')` }}>
+            </div>
           </div>
-          <motion.div className="textContainer" style={{ y }} >
+          <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button><a href={item.link}>live site</a></button>
+            <button>
+              <a href={item.link}>live site</a>
+            </button>
           </motion.div>
         </div>
       </div>
