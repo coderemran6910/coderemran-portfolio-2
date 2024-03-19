@@ -3,6 +3,7 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'sonner'
+import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 
 const variants = {
@@ -66,20 +67,42 @@ const Contact = () => {
             Feel free to contact me for any work or suggestions below
           </motion.p>
 
-          <motion.div className="social" variants={variants}>
-            <a href="#">
-              <img src="./facebook.png" alt="" />
-            </a>
-            <a href="#">
-              <img src="./instagram.png" alt="" />
-            </a>
-            <a href="#">
-              <img src="./youtube.png" alt="" />
-            </a>
-            <a href="#">
-              <img src="./dribble.png" alt="" />
-            </a>
-          </motion.div>
+          <motion.div className="social">
+          <a
+            href="https://github.com/coderemran6910"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>
+              {" "}
+              <FaGithub />{" "}
+            </span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/coderemran/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>
+              {" "}
+              <FaLinkedin />{" "}
+            </span>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.facebook.com/coderemran69/"
+          >
+            <span>
+              <FaFacebook />
+            </span>
+          </a>
+          <a href="https://wa.me/+8801789039407" target="_blank" rel="noreferrer">
+            <span>
+              <FaWhatsapp />
+            </span>
+          </a>
+        </motion.div>
         </motion.div>
 
         <div className="formContainer">
