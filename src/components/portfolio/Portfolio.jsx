@@ -64,7 +64,7 @@ const SingleItem = ({ item }) => {
   return (
     <section>
       <div className="container">
-        <div className="wrapper">
+        <div className="wrapper flex-none md:flex">
           <div className="imageContainer" ref={ref}>
             <div className="img" style={{ backgroundImage: `url('${item.Image}')` }}>
             </div>

@@ -3,14 +3,18 @@
     overflow: hidden;
     background: linear-gradient(180deg, #0c0c1d, #111132);
     position: relative;
+    // background-image: url('/banner.png'); /* Make sure this path is correct */
+    // background-size: cover;
+    // background-position: center;
 
     .wrapper {
         max-width: 1366px;
         height: 100%;
         margin: 0 auto;
+        position: relative;
+        z-index: 2;
 
         .textContainer {
-            width: 50%;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -20,7 +24,7 @@
             h2{
                 font-size: 30px;
                 letter-spacing: 10px;
-                // color: rebeccapurple;
+                color: rebeccapurple;
             }
 
             h1{
@@ -42,6 +46,7 @@
 
             img{
                 width: 50px;
+
             }
             }
         }
@@ -62,6 +67,7 @@
             position: absolute;
             right: 0;
             bottom: 0;
+            z-index: 3;
 
             img{
                 height: 100%;
@@ -71,99 +77,35 @@
         }
 
 
-
-
-
-        @media (max-width: 768px) {
-            .textContainer {
-              gap: 20px; // Reduce gap between elements
         
-              h1 {
-                font-size: 30px; // Further reduce font size for mobile
-              }
-        
-              h2 {
-                font-size: 20px; // Smaller size for subtitle
-                letter-spacing: 5px; // Adjust letter spacing for mobile
-              }
-        
-              .buttons {
-                button {
-                  padding: 8px 16px; // Adjust button padding for smaller screens
-                }
-              }
-        
-              img {
-                width: 40px; // Adjust image size in the textContainer
-              }
-            }
-        
-            .slidingTextContainer {
-              font-size: 20vh; // Smaller text for sliding effect
-            }
-        
-            .imageContainer {
-              img {
-                height: auto;
-                width: 100%; // Full-width images on mobile
-              }
-            }
-          }
-        
-          @media (max-width: 480px) {
-            .banner {
-                height: auto;
-                background: linear-gradient(180deg, #0c0c1d, #111132);
-                position: absolute;
-
-                .wrapper {
-                    height: auto;
-                    margin: 0 auto;
-                }
-                .textContainer {
-                    gap: 15px; // Smaller gap for very small screens
-                    display: block;
-                    
-                    h1 {
-                        font-size: 24px; // Further reduce font size for extra small screens
-                    }
-                    
-                    h2 {
-                        font-size: 18px;
-                        letter-spacing: 3px; // Adjust letter spacing for very small screens
-                    }
-                    
-                    .buttons {
-                        button {
-                            padding: 6px 12px; // Smaller padding for buttons on extra small screens
-                        }
-                    }
-                    
-        
-                }
-                
-                .slidingTextContainer {
-                    font-size: 15vh; // Even smaller sliding text for extra small screens
-                }
-                
-                .imageContainer {
-                
-                position: absolute;
-                display: column
-              img {
-                height: auto;
-                width: 100%; // Full-width images on extra small screens
-            }
-        }
-    }
-          }
-
-
-
-
-
 
         }
 
-   
 
+
+        @media screen and (max-width: 640px) {  
+         
+          .banner{
+            height: calc(100vh - 100px);
+            overflow: hidden;
+            position: relative;
+            background-image: url('/banner.png'); /* Make sure this path is correct */
+            background-size: cover;
+            background-position: center;
+          }
+
+          .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.873); /* Semi-transparent black */
+            z-index: 1; /* Ensures the overlay is above the image but behind the text */
+   }
+
+
+        }
+        
+       
