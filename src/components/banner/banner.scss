@@ -20,7 +20,7 @@
             h2{
                 font-size: 30px;
                 letter-spacing: 10px;
-                color: rebeccapurple;
+                // color: rebeccapurple;
             }
 
             h1{
@@ -70,7 +70,100 @@
             
         }
 
+
+
+
+
+        @media (max-width: 768px) {
+            .textContainer {
+              gap: 20px; // Reduce gap between elements
+        
+              h1 {
+                font-size: 30px; // Further reduce font size for mobile
+              }
+        
+              h2 {
+                font-size: 20px; // Smaller size for subtitle
+                letter-spacing: 5px; // Adjust letter spacing for mobile
+              }
+        
+              .buttons {
+                button {
+                  padding: 8px 16px; // Adjust button padding for smaller screens
+                }
+              }
+        
+              img {
+                width: 40px; // Adjust image size in the textContainer
+              }
+            }
+        
+            .slidingTextContainer {
+              font-size: 20vh; // Smaller text for sliding effect
+            }
+        
+            .imageContainer {
+              img {
+                height: auto;
+                width: 100%; // Full-width images on mobile
+              }
+            }
+          }
+        
+          @media (max-width: 480px) {
+            .banner {
+                height: auto;
+                background: linear-gradient(180deg, #0c0c1d, #111132);
+                position: absolute;
+
+                .wrapper {
+                    height: auto;
+                    margin: 0 auto;
+                }
+                .textContainer {
+                    gap: 15px; // Smaller gap for very small screens
+                    display: block;
+                    
+                    h1 {
+                        font-size: 24px; // Further reduce font size for extra small screens
+                    }
+                    
+                    h2 {
+                        font-size: 18px;
+                        letter-spacing: 3px; // Adjust letter spacing for very small screens
+                    }
+                    
+                    .buttons {
+                        button {
+                            padding: 6px 12px; // Smaller padding for buttons on extra small screens
+                        }
+                    }
+                    
+        
+                }
+                
+                .slidingTextContainer {
+                    font-size: 15vh; // Even smaller sliding text for extra small screens
+                }
+                
+                .imageContainer {
+                
+                position: absolute;
+                display: column
+              img {
+                height: auto;
+                width: 100%; // Full-width images on extra small screens
+            }
+        }
     }
+          }
+
+
+
+
+
+
+        }
 
    
 

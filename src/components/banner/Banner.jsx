@@ -40,10 +40,10 @@ const sliderVariants = {
 
 const Banner = () => {
     return (
-        <div className='banner'>
+        <div className='banner '>
            <div className="wrapper">
            <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-                <motion.h2 variants={textVariants}>Hello, I'm Coder Emran</motion.h2>
+                <motion.h2 variants={textVariants} className=' text-red-600 text-5xl '>Hello, I'm Coder Emran</motion.h2>
                 <motion.h1 variants={textVariants}>Frontend Developer and Designer</motion.h1>
                 <motion.div variants={textVariants} className="buttons">
                     <motion.button variants={textVariants}>Download Resume</motion.button>
