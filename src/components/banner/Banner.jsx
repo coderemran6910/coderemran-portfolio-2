@@ -44,7 +44,7 @@ const Banner = () => {
            <div className="wrapper">
            <motion.div className="textContainer w-full md:w-1/2 m-0 md:m-10" variants={textVariants} initial="initial" animate="animate">
                 <motion.h2 variants={textVariants} className=' text-2xl md:text-3xl mt-4 md:mt-0  '>Hello, I'm Coder Emran</motion.h2>
-                <motion.h1 variants={textVariants}>Frontend Developer and Designer</motion.h1>
+                <motion.h1 variants={textVariants} className='text-6xl md:text-5xl xl:text-6xl mt-4 md:mt-0 '>Frontend Developer and Designer</motion.h1>
                 <motion.div variants={textVariants} className="buttons">
                     <motion.button variants={textVariants}>Download Resume</motion.button>
                     <motion.button variants={textVariants}>Contact me</motion.button>
@@ -52,11 +52,11 @@ const Banner = () => {
                 <motion.img className=" m-auto md:m-0 " variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
             </motion.div>
            </div>
-           <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
+           <motion.div className="slidingTextContainer text-5xl" variants={sliderVariants} initial="initial" animate="animate">
                 React JS, Next JS, Node JS, HTML, CSS
            </motion.div>
 
-            <div className='imageContainer hidden md:block w-1/3 h-fit   '>
+            <div className='imageContainer hidden md:block w-1/3 md:w-5/12   '>
                 <img src="/banner.png" alt="banner"  />
             </div>
         </div>

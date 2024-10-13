@@ -60,6 +60,7 @@
             color: #ffffff09;
             width: 50%;
             font-weight: bold;
+            // z-index: 3;
         }
 
         .imageContainer {
@@ -83,7 +84,9 @@
 
 
 
-        @media screen and (max-width: 640px) {  
+        @media screen and (max-width: 640px) {
+            
+    
          
           .banner{
             height: calc(100vh - 100px);
@@ -92,6 +95,24 @@
             background-image: url('/banner.png'); /* Make sure this path is correct */
             background-size: cover;
             background-position: center;
+
+
+            .slidingTextContainer {
+            
+                position: absolute;
+                font-size: 20vh;
+                bottom: 20px;
+                white-space: nowrap;
+                color: #ffffff;
+                width: 100%;
+                font-weight: bold;
+                // z-index: 2;
+            }
+            .buttons {
+                button{
+                    z-index: 5;
+                }
+            }
           }
 
           .banner::before {
@@ -107,5 +128,3 @@
 
 
         }
-        
-       
