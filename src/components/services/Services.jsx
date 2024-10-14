@@ -94,17 +94,23 @@ const servicesData = [
       return (
           <div className="services" ref={ref}>
               <div className="wrapper">
-                  <motion.div className="services-container" variants={containerVariants} initial="hidden" animate={controls}>
+                  <motion.section className="services-container h-full lg:h-screen" variants={containerVariants} initial="hidden" animate={controls}>
                       {servicesData.map((item) => (
-                          <motion.div className="service" key={item.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        
+                          <motion.div className="service w-full lg:w-1/3 p-4 h-screen lg:h-1/3" key={item.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                             
+                              <div className="icon text-center lg:text-left">
                               <IconContext.Provider value={{ size: '3em' }}>
                                   <item.icon color={item.color} /> {/* Rendering the icon dynamically */}
                               </IconContext.Provider>
-                              <h2>{item.name}</h2>
+                              </div>
+                              <h2 className='font-bold text-3xl '>{item.name}</h2>
                               <p>{item.description}</p>
+                              
                           </motion.div>
+                        
                       ))}
-                  </motion.div>
+                  </motion.section>
               </div>
           </div>
       );

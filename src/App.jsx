@@ -14,7 +14,7 @@ const App = () => {
     <section id='Services'>
       <Paralax type="services" />
     </section>
-    <section><Services/></section>
+   <Services/>
 
 
     <section id='Portfolio'>
