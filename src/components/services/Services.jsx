@@ -97,15 +97,15 @@ const servicesData = [
                   <motion.section className="services-container h-full lg:h-screen" variants={containerVariants} initial="hidden" animate={controls}>
                       {servicesData.map((item) => (
                         
-                          <motion.div className="service w-full lg:w-1/3 p-4 h-screen lg:h-1/3" key={item.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                          <motion.div className="service w-full lg:w-1/3 p-4 h-screen md:h-64 gap-5 md:gap-0  " key={item.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                              
-                              <div className="icon text-center lg:text-left">
+                              <div className="icon text-center lg:text-left text-5xl md:text-base">
                               <IconContext.Provider value={{ size: '3em' }}>
                                   <item.icon color={item.color} /> {/* Rendering the icon dynamically */}
                               </IconContext.Provider>
                               </div>
-                              <h2 className='font-bold text-3xl '>{item.name}</h2>
-                              <p>{item.description}</p>
+                              <h2 className='font-bold text-3xl lg:text-2xl '>{item.name}</h2>
+                              <p className='overflow-hidden md:overflow-y-scroll h-auto md:h-20'>{item.description}</p>
                               
                           </motion.div>
                         

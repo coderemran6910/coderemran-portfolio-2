@@ -50,13 +50,13 @@
 
             .imageContainer{
                 flex:1;
-                height: 50%;
+                height: 90vh;
                
 
                 // overflow: hidden;
                 .img{
-                    width: 500px;
-                    height: 400px;
+                    width: 100%;
+                    height: 100%;
                     border: 1px solid white;
                     border-radius: 0.5rem;
                     background-size: cover;
@@ -70,11 +70,13 @@
             }
 
             .textContainer{
+                height: 50vh;
                 flex:1;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 gap: 30px;
+                background:linear-gradient(180deg, #0c0c1d, #111132);
     
                 h2{
                     color: orange;
@@ -82,7 +84,7 @@
                 }
     
                 p{
-                    color: gray;
+                    color: whitesmoke;
                     font-size: 20px;
                 }
     

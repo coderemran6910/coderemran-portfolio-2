@@ -62,14 +62,15 @@ const SingleItem = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section>
+    <section style={{ backgroundImage: `url('${item.Image}')`, backgroundSize: "cover", backgroundPosition: "top", backgroundRepeat: "no-repeat", height: "100vh", overflow: "hidden",    }} className=" relative ">
+      <div className="absolute inset-0 bg-purple-900 bg-opacity-60 flex items-center justify-center">
       <div className="container">
-        <div className="wrapper flex-none md:flex">
-          <div className="imageContainer" ref={ref}>
+        <div className="wrapper flex-none flex">
+          <div className="imageContainer cursor-pointer " ref={ref}>
             <div className="img" style={{ backgroundImage: `url('${item.Image}')` }}>
             </div>
           </div>
-          <motion.div className="textContainer" style={{ y }}>
+          <motion.div className="textContainer p-10 rounded-xl " style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button>
@@ -77,6 +78,7 @@ const SingleItem = ({ item }) => {
             </button>
           </motion.div>
         </div>
+      </div>
       </div>
     </section>
   );
