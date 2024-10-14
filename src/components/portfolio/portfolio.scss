@@ -14,7 +14,7 @@
             position: sticky;
             top: 0;
             left: 0;
-            padding-top: 50px;
+            // padding-top: 50px;
             text-align: center;
             color: orange;
             font-size: 36px;
@@ -46,11 +46,10 @@
             gap: 50px;
             align-items: center;
             justify-content: center;
-            gap: 20px;
 
             .imageContainer{
                 flex:1;
-                height: 90vh;
+                height: 65vh;
                
 
                 // overflow: hidden;
@@ -70,13 +69,14 @@
             }
 
             .textContainer{
-                height: 50vh;
+                height:  65vh;
                 flex:1;
                 display: flex;
                 flex-direction: column;
+                // align-items: center;
                 justify-content: center;
-                gap: 30px;
-                background:linear-gradient(180deg, #0c0c1d, #111132);
+                gap: 20px;
+                background:linear-gradient(180deg, #0c0c1d54, #111132df);
     
                 h2{
                     color: orange;
@@ -89,7 +89,7 @@
                 }
     
                 button{
-                    padding: 10px 20px;
+                    padding: 10px 10px;
                     border:1px solid white;
                     border-radius: 10px;
                     background-color: transparent;
@@ -100,5 +100,16 @@
     }
 
 
+    
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .textContainer{
+        height: 100% !important;
+        background: #0000005b !important;
+       
+    }
     
 }

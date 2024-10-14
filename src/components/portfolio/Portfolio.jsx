@@ -8,12 +8,12 @@ const items = [
     title: "Contest Management",
     desc: "Determine the kind of contest you want to create. Is it a design contest, a coding challenge, a writing competition, or something else entirely? Clarify the rules, guidelines, and objectives for participants. Target Audience: Identify your target participants.",
     Image:
-    "https://i.ibb.co/NyMw7yt/screencapture-contest-creation-platform-web-app-2024-02-18-01-50-08.png",
+      "https://i.ibb.co/NyMw7yt/screencapture-contest-creation-platform-web-app-2024-02-18-01-50-08.png",
     link: "https://rastaurent-management-a-11.web.app",
     githubClient:
-    "https://github.com/programming-hero-web-course1/b8a12-client-side-coderemran6910.git",
+      "https://github.com/programming-hero-web-course1/b8a12-client-side-coderemran6910.git",
     githubServer:
-    "https://github.com/programming-hero-web-course1/b8a12-server-side-coderemran6910.git",
+      "https://github.com/programming-hero-web-course1/b8a12-server-side-coderemran6910.git",
   },
 
   {
@@ -59,26 +59,43 @@ const SingleItem = ({ item }) => {
     // offset: ["end end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  // const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section style={{ backgroundImage: `url('${item.Image}')`, backgroundSize: "cover", backgroundPosition: "top", backgroundRepeat: "no-repeat", height: "100vh", overflow: "hidden",    }} className=" relative ">
-      <div className="absolute inset-0 bg-purple-900 bg-opacity-60 flex items-center justify-center">
-      <div className="container">
-        <div className="wrapper flex-none flex">
-          <div className="imageContainer cursor-pointer " ref={ref}>
-            <div className="img" style={{ backgroundImage: `url('${item.Image}')` }}>
+    <section className=" relative ">
+      <div  style={{
+      backgroundImage: `url('${item.Image}')`,
+      backgroundPosition: "top",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      width: "100%",
+      height: "100vh",
+      overflow: "hidden",
+    }}>
+        <div className="absolute inset-0 bg-purple-900 bg-opacity-60 flex items-center justify-center backdrop-blur-sm">
+          <div className="container">
+            <div className="wrapper ">
+              <div
+                className="imageContainer backdrop-blur-2xl cursor-pointer hidden lg:block "
+                ref={ref}
+              >
+                <div
+                  className="img"
+                  style={{ backgroundImage: `url('${item.Image}')` }}
+                ></div>
+              </div>
+              <div
+                className="textContainer align-items-center lg:align-items-start pt-5 px-10 mt-40 lg:mt-0  rounded-xl   backdrop-blur-sm"
+              >
+                <h2>{item.title}</h2>
+                <p>{item.desc}</p>
+                <button>
+                  <a href={item.link}>live site</a>
+                </button>
+              </div>
             </div>
           </div>
-          <motion.div className="textContainer p-10 rounded-xl " style={{ y }}>
-            <h2>{item.title}</h2>
-            <p>{item.desc}</p>
-            <button>
-              <a href={item.link}>live site</a>
-            </button>
-          </motion.div>
         </div>
-      </div>
       </div>
     </section>
   );
@@ -96,11 +113,11 @@ const Portfolio = () => {
   });
 
   return (
-    <div className="portfolio" ref={ref}>
-      <div className="portfolios">
-        <div className="progress">
+    <div className="portfolio " ref={ref}>
+      <div className="portfolios" >
+        <div className="progress z-50 bg-purple-950 p-5 ">
           <h1>My Portfolios</h1>
-          <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+          <motion.div style={{ scaleX }} className="progressBar rounded-xl"></motion.div>
         </div>
         {items.map((item) => (
           <SingleItem item={item} key={item.id} />
