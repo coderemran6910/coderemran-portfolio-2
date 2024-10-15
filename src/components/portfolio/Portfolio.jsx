@@ -72,11 +72,11 @@ const SingleItem = ({ item }) => {
       height: "100vh",
       overflow: "hidden",
     }}>
-        <div className="absolute inset-0 bg-purple-900 bg-opacity-60 flex items-center justify-center backdrop-blur-sm">
+        <div className="absolute inset-0 bg-purple-900 bg-opacity-60 flex items-center justify-center ">
           <div className="container">
-            <div className="wrapper ">
+            <div className="wrapper p-0 xl:p-10 ">
               <div
-                className="imageContainer backdrop-blur-2xl cursor-pointer hidden lg:block "
+                className="imageContainer backdrop-blur-md cursor-pointer hidden lg:block "
                 ref={ref}
               >
                 <div
@@ -85,7 +85,7 @@ const SingleItem = ({ item }) => {
                 ></div>
               </div>
               <div
-                className="textContainer align-items-center lg:align-items-start pt-5 px-10 mt-40 lg:mt-0  rounded-xl   backdrop-blur-sm"
+                className="textContainer align-items-center lg:align-items-start pt-5 px-10 mt-40 lg:mt-0  rounded-xl   backdrop-blur-sm text-center lg:text-left"
               >
                 <h2>{item.title}</h2>
                 <p>{item.desc}</p>

@@ -60,8 +60,8 @@ const Contact = () => {
       initial="initial"
       whileInView="animate"
     >
-      <motion.div className="wrapper" variants={variants}>
-        <motion.div className="textContainer" variants={variants}>
+      <motion.div className="wrapper flex flex-col md:flex-row justify-center items-center " variants={variants}>
+        <motion.div className="textContainer text-center px-5" variants={variants}>
           <motion.h1 variants={variants}>Get in touch</motion.h1>
           <motion.p variants={variants}>
             Feel free to contact me for any work or suggestions below
@@ -105,7 +105,7 @@ const Contact = () => {
         </motion.div>
         </motion.div>
 
-        <div className="formContainer">
+        <div className="formContainer pr-0 md:pr-5">
           <motion.div
             className="phoneSvg"
             initial={{ opacity: 1 }}
@@ -121,6 +121,7 @@ const Contact = () => {
               height="400px"
               viewBox="0 0 64 64"
               version="1.1"
+              className=" w-52 h-52 md:w-72 md:h-72"
             >
               <g id="_x32_5_attachment" />
 
@@ -188,6 +189,7 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
+           className="w-96 md:w-full  "
            onSubmit={sendEmail}
            ref={ref}
            initial={{ opacity: 0 }}

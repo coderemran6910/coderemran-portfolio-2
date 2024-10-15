@@ -42,12 +42,12 @@ const Banner = () => {
     return (
         <div className='banner text-center md:text-left '>
            <div className="wrapper">
-           <motion.div className="textContainer w-full md:w-1/2 m-0 md:m-10" variants={textVariants} initial="initial" animate="animate">
-                <motion.h2 variants={textVariants} className=' text-2xl md:text-3xl mt-4 md:mt-0  '>Hello, I'm Coder Emran</motion.h2>
+           <motion.div className="textContainer w-full md:w-screen lg:w-1/2 m-0 p-0 md:p-10 lg:m-10" variants={textVariants} initial="initial" animate="animate">
+                <motion.h2 variants={textVariants} className=' text-lg md:text-3xl mt-4 md:mt-0  '>Hello, I'm Coder Emran</motion.h2>
                 <motion.h1 variants={textVariants} className='text-6xl md:text-5xl xl:text-6xl mt-4 md:mt-0 '>Frontend Developer and Designer</motion.h1>
                 <motion.div variants={textVariants} className="buttons">
-                    <motion.button variants={textVariants}>Download Resume</motion.button>
-                    <motion.button variants={textVariants}>Contact me</motion.button>
+                    <motion.button className='w-40 text-sm' variants={textVariants}>Download Resume</motion.button>
+                    <motion.button className='w-40 text-sm' variants={textVariants}>Contact me</motion.button>
                 </motion.div>
                 <motion.img className=" m-auto md:m-0 " variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
             </motion.div>
