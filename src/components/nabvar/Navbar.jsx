@@ -5,19 +5,19 @@ import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar ">
       {/* sidebar  */}
       <Sidebar />
-      <div className="wrapper">
+      <div className="wrapper pl-24   md:pl-28 pr-5 xl:pr-20">
         <motion.span
-          className=" text-2xl md:text-3xl  ml-28 xl:m-0"
+          className=" text-xl md:text-3xl"
           initial={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 2 }}
           animate={{ opacity: 1, scale: 1 }}
         >
           Coder Emran
         </motion.span>
-        <div className="social mr-5 md:mr-0">
+        <div className="social">
           <a
             href="https://github.com/coderemran6910"
             target="_blank"

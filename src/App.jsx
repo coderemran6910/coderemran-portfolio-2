@@ -11,19 +11,17 @@ const App = () => {
       <Navbar />
       <Banner/>
     </section>
-    <section id='Services'>
-      <Paralax type="services" />
-    </section>
-   <Services/>
-
 
     <section id='Portfolio'>
       <Paralax type="portfolio" />
     </section>
       <Portfolio /> 
-    
-    
 
+    <section id='Services'>
+      <Paralax type="services" />
+    </section>
+   <Services/>
+   
     <section id='Contact'>
       <Paralax type="contact" />
     </section>

@@ -61,7 +61,7 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div className="wrapper flex flex-col md:flex-row justify-center items-center " variants={variants}>
-        <motion.div className="textContainer text-center px-5" variants={variants}>
+        <motion.div className="textContainer text-center px-5 py-5" variants={variants}>
           <motion.h1 variants={variants}>Get in touch</motion.h1>
           <motion.p variants={variants}>
             Feel free to contact me for any work or suggestions below
@@ -189,7 +189,7 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
-           className="w-96 md:w-full  "
+           className="w-80 md:w-full gap-2 p-10  "
            onSubmit={sendEmail}
            ref={ref}
            initial={{ opacity: 0 }}
