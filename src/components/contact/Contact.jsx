@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-import emailjs from '@emailjs/browser';
-import { Toaster, toast } from 'sonner'
+import emailjs from "@emailjs/browser";
+import { Toaster, toast } from "sonner";
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 
@@ -19,40 +19,41 @@ const variants = {
       staggerChildren: 0.1,
     },
   },
+  scrollButton:{
+    opacity:0,
+    y: 10,
+    transition:{
+        duration:2,
+        repeat: Infinity 
+    }
+}
 };
 
-
-  
-
-
-
-
 const Contact = () => {
-
-
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm( import.meta.env.VITE_SOPPORT_SERVICE_ID,
-        import.meta.env.VITE_SOPPORT_TEMPLATE_ID, ref.current, {
-        publicKey:  import.meta.env.VITE_SOPPORT_PUBLIC_KEY,
-      })
+      .sendForm(
+        import.meta.env.VITE_SOPPORT_SERVICE_ID,
+        import.meta.env.VITE_SOPPORT_TEMPLATE_ID,
+        ref.current,
+        {
+          publicKey: import.meta.env.VITE_SOPPORT_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
-          toast.success('EMAIL SENT SUCCESSFULLY!! Thanks ');
+          toast.success("EMAIL SENT SUCCESSFULLY!! Thanks ");
         },
         (error) => {
           toast.error(error.text);
-        },
+        }
       );
   };
 
-
-
-
-    const ref = useRef(null);
-    const isInView = useInView(ref, { mergin: "-100px" });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { mergin: "-100px" });
   return (
     <motion.div
       className="contact"
@@ -60,49 +61,59 @@ const Contact = () => {
       initial="initial"
       whileInView="animate"
     >
-      <motion.div className="wrapper flex flex-col md:flex-row justify-center items-center " variants={variants}>
-        <motion.div className="textContainer text-center px-5 py-5" variants={variants}>
+      <motion.div
+        className="wrapper flex flex-col md:flex-row justify-center items-center "
+        variants={variants}
+      >
+        <motion.div
+          className="textContainer text-center px-5 py-5"
+          variants={variants}
+        >
           <motion.h1 variants={variants}>Get in touch</motion.h1>
           <motion.p variants={variants}>
             Feel free to contact me for any work or suggestions below
           </motion.p>
 
           <motion.div className="social">
-          <a
-            href="https://github.com/coderemran6910"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>
-              {" "}
-              <FaGithub />{" "}
-            </span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/coderemran/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>
-              {" "}
-              <FaLinkedin />{" "}
-            </span>
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.facebook.com/coderemran69/"
-          >
-            <span>
-              <FaFacebook />
-            </span>
-          </a>
-          <a href="https://wa.me/+8801789039407" target="_blank" rel="noreferrer">
-            <span>
-              <FaWhatsapp />
-            </span>
-          </a>
-        </motion.div>
+            <a
+              href="https://github.com/coderemran6910"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>
+                {" "}
+                <FaGithub />{" "}
+              </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/coderemran/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>
+                {" "}
+                <FaLinkedin />{" "}
+              </span>
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.facebook.com/coderemran69/"
+            >
+              <span>
+                <FaFacebook />
+              </span>
+            </a>
+            <a
+              href="https://wa.me/+8801789039407"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>
+                <FaWhatsapp />
+              </span>
+            </a>
+          </motion.div>
         </motion.div>
 
         <div className="formContainer pr-0 md:pr-5">
@@ -114,9 +125,9 @@ const Contact = () => {
           >
             <motion.svg
               fill="#000000"
-              initial={{pathLength: 0}}
-              animate={isInView && {pathLength: 1}}
-              transition={{duration: 3}}
+              initial={{ pathLength: 0 }}
+              animate={isInView && { pathLength: 1 }}
+              transition={{ duration: 3 }}
               width="400px"
               height="400px"
               viewBox="0 0 64 64"
@@ -189,21 +200,27 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
-           className="w-80 md:w-full gap-2 p-10  "
-           onSubmit={sendEmail}
-           ref={ref}
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           transition={{ delay:3 , duration: 1 }}
+            className="w-80 md:w-full gap-2 p-10  "
+            onSubmit={sendEmail}
+            ref={ref}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 3, duration: 1 }}
           >
             <input required type="text" placeholder="Name" name="user_name" />
-            <input required type="email" placeholder="Email" name="user_email" />
+            <input
+              required
+              type="email"
+              placeholder="Email"
+              name="user_email"
+            />
             <textarea rows="8" placeholder="message" name="message" />
             <button type="submit">Send</button>
           </motion.form>
         </div>
+        
       </motion.div>
-      <Toaster/>
+      <Toaster />
     </motion.div>
   );
 };

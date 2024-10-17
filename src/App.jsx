@@ -25,7 +25,7 @@ const App = () => {
     <section id='Contact'>
       <Paralax type="contact" />
     </section>
-    <section>
+    <section id='Contact'>
       <Contact />
     </section>
     

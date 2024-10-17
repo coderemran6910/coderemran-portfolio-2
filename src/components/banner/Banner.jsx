@@ -1,5 +1,6 @@
 import './banner.scss'
 import {motion} from 'framer-motion'
+import {Link} from 'react-scroll'
 const textVariants = {
     initial:{
         x:-500,
@@ -40,7 +41,7 @@ const sliderVariants = {
 
 const Banner = () => {
     return (
-        <div className='banner text-center lg:text-left '>
+        <div id='home' className='banner text-center lg:text-left '>
            <div className="wrapper">
            <motion.div className="textContainer w-full lg:w-1/2 m-0 p-0 md:p-10 lg:m-10" variants={textVariants} initial="initial" animate="animate">
                 <motion.h2 variants={textVariants} className=' text-lg md:text-3xl mt-4 md:mt-0  '>Hello, I'm Coder Emran</motion.h2>
@@ -49,7 +50,13 @@ const Banner = () => {
                     <motion.button className='w-40 text-sm m-0' variants={textVariants}>Download Resume</motion.button>
                     <motion.button className='w-40 text-sm m-0' variants={textVariants}>Contact me</motion.button>
                 </motion.div>
-                <motion.img className=" m-auto md:m-0 " variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
+
+
+                <Link  to="Contact" smooth={true}  duration={2000} spy={true} hashSpy={true}  delay={500}  isDynamic={true} >
+                <motion.img className=" m-auto md:m-0 cursor-pointer " variants={textVariants} animate="scrollButton" src="/scroll.png" alt="scroll btn" />
+                </Link>
+
+                
             </motion.div>
            </div>
            <motion.div className="slidingTextContainer text-5xl" variants={sliderVariants} initial="initial" animate="animate">
