@@ -1,6 +1,8 @@
 import './banner.scss'
 import {motion} from 'framer-motion'
 import {Link} from 'react-scroll'
+
+const myResume ='https://drive.google.com/file/d/1S0ZAakVU6G_8jMZkVbP-sPjkyeIk1Q5S/view?usp=sharing'
 const textVariants = {
     initial:{
         x:-500,
@@ -47,12 +49,16 @@ const Banner = () => {
                 <motion.h2 variants={textVariants} className=' text-lg md:text-3xl mt-4 md:mt-0  '>Hello, I'm Coder Emran</motion.h2>
                 <motion.h1 variants={textVariants} className='text-6xl  xl:text-6xl mt-4 md:mt-0 px-5 lg:px-0 '>Frontend Developer and Designer</motion.h1>
                 <motion.div variants={textVariants} className="buttons w-full flex justify-center lg:justify-start items-center gap-5 ">
+                <a href={myResume} target="_blank" rel="noreferrer" download="Akramul Hoque Resume.pdf" > 
                     <motion.button className='w-40 text-sm m-0' variants={textVariants}>Download Resume</motion.button>
-                    <motion.button className='w-40 text-sm m-0' variants={textVariants}>Contact me</motion.button>
+                </a>
+                   <a href="#contact">
+                   <motion.button className='w-40 text-sm m-0' variants={textVariants}>Contact me</motion.button>
+                   </a>
                 </motion.div>
 
 
-                <Link  to="Contact" smooth={true}  duration={2000} spy={true} hashSpy={true}  delay={500}  isDynamic={true} >
+                <Link  to="contact" smooth={true}  duration={2000} spy={true} hashSpy={true}  delay={500}  isDynamic={true} >
                 <motion.img className=" m-auto md:m-0 cursor-pointer " variants={textVariants} animate="scrollButton" src="/scroll.png" alt="scroll btn" />
                 </Link>
 
